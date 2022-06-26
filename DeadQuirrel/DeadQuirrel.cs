@@ -58,7 +58,7 @@ namespace DeadQuirrel
 
 		private string BeforeSceneLoadHook(string scene)
 		{
-			if(scene == "Crossroads_50")
+			if(scene == "Crossroads_50" && PlayerData.instance.GetBool(nameof(PlayerData.quirrelEpilogueCompleted)))
 			{
 				quirrelGO.SetActive(true);
 				quirrelGO.transform.position = new Vector3(random.Next(30, 221), 22f);
